@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客首页</title>
+</head>
+<body>
+    <h1>欢迎来到冒港打的博客首页</h1>
+    {% for Art in Arts %}
+        <a href="{% url 'myblog:show' Art.id %}">{{ Art.title }}</a>
+        <br><br>
+    {% endfor %}
+    <br><br>
+    <a href="{% url 'myblog:edit' 0 %}">发表新文章</a>
+</body>
+</html>
